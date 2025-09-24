@@ -1,0 +1,21 @@
+.middleEllipsis {
+  display: inline-block;
+  white-space: nowrap;
+  user-select: all;
+  max-width: 15.1ch;
+  transition: max-width 600ms ease-out;
+
+  > :first-child {
+    display: inline-block;
+    vertical-align: middle;
+    max-width: calc(100% - 8ch);
+    text-overflow: ellipsis;
+    overflow: hidden;
+    min-width: 5ch;
+  }
+
+  > :last-child {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}

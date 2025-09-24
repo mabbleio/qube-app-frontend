@@ -1,0 +1,121 @@
+.global {
+  color: var(--white);
+
+  :global(h1) {
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 36.31px;
+  }
+
+  :global(h2) {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24.2px;
+  }
+
+  :global(p) {
+    &:global(.text-xxxl) {
+      font-size: 48px;
+      line-height: 48px;
+    }
+
+    &:global(.text-xxl) {
+      font-size: 24px;
+      line-height: 24px;
+    }
+
+    &:global(.text-xl) {
+      font-size: 20px;
+      line-height: 24.2px;
+    }
+
+    &:global(.text-base) {
+      font-size: 16px;
+      line-height: 19.36px;
+    }
+
+    &:global(.text-sm) {
+      font-size: 14px;
+      line-height: 16.94px;
+    }
+
+    &:global(.text-tiny) {
+      font-size: 12px;
+      line-height: 12px;
+    }
+
+    &:global(.regular) {
+      font-weight: 400;
+    }
+
+    &:global(.medium) {
+      font-weight: 500;
+    }
+  }
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 0 1rem 2.25rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.discoverTitle {
+  margin-bottom: 1.5rem;
+}
+
+.dAppsTitle,
+.toolingTitle {
+  margin-bottom: 1rem;
+}
+
+.featured,
+.dApps,
+.tooling {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 3rem;
+}
+
+@media screen and (min-width: 1000px) {
+  .app {
+    padding: 1.84375rem 1.5rem 1.5rem;
+  }
+
+  .featured {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    width: 100%;
+
+    > * {
+      display: flex;
+
+      &:first-child {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+
+      &:not(:first-child) {
+        flex: 0 0 calc(50% - 0.75rem);
+        max-width: calc(50% - 0.75rem);
+      }
+    }
+  }
+
+  .dApps,
+  .tooling {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+
+    > * {
+      flex: 0 0 calc(33.333333% - 1rem);
+      max-width: calc(33.333333% - 1rem);
+    }
+  }
+}

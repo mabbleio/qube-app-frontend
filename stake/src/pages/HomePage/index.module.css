@@ -1,0 +1,58 @@
+.homePage {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 100%;
+  max-width: 671px;
+  margin: 0 auto;
+
+  .logo {
+    margin-bottom: 4px;
+  }
+
+  p {
+    color: var(--white);
+
+    &.description,
+    &.discoverMore {
+      margin-bottom: 2.5rem;
+    }
+  }
+
+  .connectWallet {
+    margin-bottom: 2.5rem;
+
+    button {
+      padding: 0 2rem;
+      border-radius: 999px;
+    }
+  }
+
+  .infoBoxes {
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+    max-width: 375px;
+
+    a {
+      text-decoration: none;
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .homePage {
+    padding: 0 0.75rem;
+
+    .logo {
+      margin-bottom: 10px;
+    }
+
+    p {
+      &.discoverMore {
+        margin-bottom: 1.375rem;
+        max-width: 75%;
+      }
+    }
+  }
+}

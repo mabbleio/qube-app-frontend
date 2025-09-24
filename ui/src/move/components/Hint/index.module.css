@@ -1,0 +1,55 @@
+.hintWrapper {
+  position: absolute;
+  right: 24px;
+}
+
+.hint {
+  background-color: #1b0f33;
+  display: flex;
+  width: 288px;
+  padding: 12px 16px;
+  text-align: center;
+  color: white;
+  margin-top: 16px;
+  border-radius: 4px;
+  position: relative;
+
+  &::before {
+    content: '';
+    border-radius: 2px;
+    background-color: #1b0f33;
+    transform: rotate(45deg);
+    position: absolute;
+    top: -6px;
+    left: 136px;
+    width: 16px;
+    height: 16px;
+  }
+}
+
+@container (max-width: 767px) {
+  .hint {
+    &::before {
+      right: 24px;
+      left: auto;
+    }
+  }
+}
+
+@container (max-width: 480px) {
+  .hintWrapper {
+    left: 50px; /* Extra space so hint doesn't cover sidebar toggle */
+    right: 110px;
+    margin-top: -60px;
+
+    .hint {
+      width: 100%;
+
+      &::before {
+        right: -8px;
+        left: auto;
+        top: 16px;
+      }
+    }
+  }
+}
