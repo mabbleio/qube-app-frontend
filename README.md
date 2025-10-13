@@ -1,19 +1,16 @@
-# ROSE App
+# Qube App
 
-The quickest way into the Oasis Ecosystem.
+The quickest way into the QubeSwap Ecosystem.
 
-The official deployment of ROSE App lives at <https://rose.oasis.io>.
-
-Development deploy is available at <https://rose.dev.oasis.io>.
+The official deployment of Qube App lives at <https://app.qubeswap.com>.
 
 ## Features
 
 - **Discover**: Ecosystem of Sapphire apps and tools
-- **Stake**: Stake your ROSE directly from Sapphire using an EVM compatible
+- **Stake**: Stake your XQST directly from Qubetics, BSC, etc... using an EVM compatible
   wallet
-- **Move**: Move your ROSE between Consensus and Sapphire
-- **Wrap**: Quickly wrap your ROSE into wROSE and vice versa with the (un)wrap
-  ROSE tool
+- **Wrap**: Quickly wrap your QST into xQST and vice versa with the (un)wrap
+  Qube App tool
 
 ## Getting started
 
@@ -21,6 +18,6 @@ Development deploy is available at <https://rose.dev.oasis.io>.
 
 ```sh
 pnpm install --frozen-lockfile
-pnpm --filter @oasisprotocol/rose-app-subcall build
+pnpm --filter @mabbleprotocol/rose-app-subcall build
 pnpm dev
 ```
