@@ -16,6 +16,7 @@
     "build": "pnpm --filter @oasisprotocol/rose-app-home build",
     "dev": "pnpm --filter @oasisprotocol/rose-app-home dev --host",
     "test": "pnpm --filter=!@oasisprotocol/rose-app-e2e --parallel -r exec vitest run --passWithNoTests",
+	"clean": "rm -rf node_modules rm -rf .next",
     "test-e2e": "pnpm --filter @oasisprotocol/rose-app-e2e test"
   },
   "license": "See License in LICENSE",
